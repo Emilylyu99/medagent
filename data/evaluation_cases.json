@@ -1,0 +1,60 @@
+{
+  "dataset_name": "synthetic_cases_official_source_retrieval_v1",
+  "notice": "All case descriptions are synthetic. Expected citations point to curator-written paraphrases of official sources.",
+  "cases": [
+    {
+      "request": {
+        "case_id": "eval-urgent-001",
+        "patient_summary": "Synthetic adult case reports difficulty breathing and persistent chest pain today.",
+        "question": "Which issue should be handled first?",
+        "top_k": 1
+      },
+      "expected_citation_ids": ["cdc-respiratory-emergency-adults-001"]
+    },
+    {
+      "request": {
+        "case_id": "eval-antibiotic-001",
+        "patient_summary": "Synthetic otherwise healthy adult case has uncomplicated acute bronchitis and a cough lasting seven days.",
+        "question": "Should routine antibiotics be recommended because of the cough duration?",
+        "top_k": 1
+      },
+      "expected_citation_ids": ["cdc-bronchitis-antibiotics-001"]
+    },
+    {
+      "request": {
+        "case_id": "eval-assessment-001",
+        "patient_summary": "Synthetic adult case has a cough, colored sputum, and possible acute bronchitis.",
+        "question": "Which findings should a clinician assess when considering pneumonia?",
+        "top_k": 1
+      },
+      "expected_citation_ids": ["cdc-bronchitis-assessment-001"]
+    },
+    {
+      "request": {
+        "case_id": "eval-risk-001",
+        "patient_summary": "Synthetic respiratory illness case involves an older adult with chronic kidney disease and diabetes.",
+        "question": "Do these higher-risk features change the urgency of professional review?",
+        "top_k": 1
+      },
+      "expected_citation_ids": ["cdc-respiratory-higher-risk-001"]
+    },
+    {
+      "request": {
+        "case_id": "eval-privacy-001",
+        "patient_summary": "A synthetic case submission includes a name, home address, birth date, and medical record number.",
+        "question": "What information should be removed before the case is submitted?",
+        "top_k": 1
+      },
+      "expected_citation_ids": ["hhs-phi-identifiers-001"]
+    },
+    {
+      "request": {
+        "case_id": "eval-deidentification-001",
+        "patient_summary": "A synthetic research team wants to prepare health records for an external evaluation dataset.",
+        "question": "Which HIPAA de-identification methods does HHS describe?",
+        "top_k": 1
+      },
+      "expected_citation_ids": ["hhs-deidentification-methods-001"]
+    }
+  ]
+}

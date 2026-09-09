@@ -1,0 +1,192 @@
+{
+  "dataset_name": "official_source_respiratory_review_corpus_v1",
+  "notice": "Curator-written paraphrases of public US government sources. Verify all details on the linked source pages. Not for patient care.",
+  "documents": [
+    {
+      "id": "cdc-respiratory-emergency-adults-001",
+      "title": "Adult respiratory emergency warning signs",
+      "category": "triage",
+      "source": "About Respiratory Illnesses",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "source_url": "https://www.cdc.gov/respiratory-viruses/about/index.html",
+      "source_updated_at": "2025-08-18",
+      "source_accessed_at": "2026-09-05",
+      "content_kind": "official_source_paraphrase",
+      "is_paraphrase": true,
+      "jurisdiction": "United States",
+      "version": "source-updated-2025-08-18",
+      "text": "CDC identifies several possible adult emergency warning signs from respiratory-virus complications, including breathing difficulty, persistent chest or abdominal pain or pressure, ongoing dizziness or confusion, inability to arouse, seizures, absent urination, severe muscle pain or weakness, and symptoms that improve before returning or worsening.",
+      "recommendation": "If an adult respiratory case reports a CDC emergency warning sign, surface it prominently and direct the case to immediate emergency medical care.",
+      "keywords": [
+        "difficulty breathing",
+        "shortness of breath",
+        "chest pain",
+        "abdominal pain",
+        "confusion",
+        "dizziness",
+        "cannot wake",
+        "seizure",
+        "not urinating",
+        "emergency"
+      ],
+      "contradicted_statements": [
+        "Respiratory emergency warning signs can wait for routine follow-up.",
+        "Do not escalate difficulty breathing or persistent chest pain."
+      ]
+    },
+    {
+      "id": "cdc-respiratory-higher-risk-001",
+      "title": "Higher-risk respiratory illness review",
+      "category": "risk_review",
+      "source": "About Respiratory Illnesses",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "source_url": "https://www.cdc.gov/respiratory-viruses/about/index.html",
+      "source_updated_at": "2025-08-18",
+      "source_accessed_at": "2026-09-05",
+      "content_kind": "official_source_paraphrase",
+      "is_paraphrase": true,
+      "jurisdiction": "United States",
+      "version": "source-updated-2025-08-18",
+      "text": "CDC notes that older adults, very young children, pregnant people, people with weakened immunity, and people with conditions such as chronic lung, heart, kidney disease, or diabetes may face greater risk of severe respiratory illness. CDC also notes that available flu and COVID-19 treatments work best when started early.",
+      "recommendation": "Flag reported higher-risk features and recommend prompt contact with a qualified healthcare professional to discuss testing and time-sensitive treatment options.",
+      "keywords": [
+        "age 65",
+        "older adult",
+        "pregnant",
+        "immunocompromised",
+        "weakened immune system",
+        "chronic lung disease",
+        "heart disease",
+        "kidney disease",
+        "diabetes",
+        "high risk",
+        "higher risk"
+      ],
+      "contradicted_statements": [
+        "Higher-risk features never affect the urgency of respiratory illness review."
+      ]
+    },
+    {
+      "id": "cdc-bronchitis-assessment-001",
+      "title": "Acute bronchitis assessment boundary",
+      "category": "clinical_assessment",
+      "source": "Outpatient Clinical Care for Adults",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "source_url": "https://www.cdc.gov/antibiotic-use/hcp/clinical-care/adult-outpatient.html",
+      "source_updated_at": "2024-04-16",
+      "source_accessed_at": "2026-09-05",
+      "content_kind": "official_source_paraphrase",
+      "is_paraphrase": true,
+      "jurisdiction": "United States",
+      "version": "source-updated-2024-04-16",
+      "text": "For otherwise healthy adults with suspected uncomplicated acute bronchitis, CDC says clinical evaluation should concentrate on excluding pneumonia. The source uses abnormal vital signs and focal lung-examination findings as important assessment features and notes that colored sputum alone does not establish bacterial infection.",
+      "recommendation": "Route possible acute bronchitis through qualified clinical assessment for pneumonia-related vital-sign and lung-examination findings; do not treat sputum color alone as proof of bacterial infection.",
+      "keywords": [
+        "acute bronchitis",
+        "bronchitis",
+        "pneumonia",
+        "vital signs",
+        "heart rate",
+        "respiratory rate",
+        "temperature",
+        "lung examination",
+        "colored sputum"
+      ],
+      "contradicted_statements": [
+        "Colored sputum by itself proves a bacterial infection.",
+        "Possible pneumonia does not need clinical assessment in an adult cough case."
+      ]
+    },
+    {
+      "id": "cdc-bronchitis-antibiotics-001",
+      "title": "Antibiotics for uncomplicated acute bronchitis",
+      "category": "antibiotic_stewardship",
+      "source": "Outpatient Clinical Care for Adults",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "source_url": "https://www.cdc.gov/antibiotic-use/hcp/clinical-care/adult-outpatient.html",
+      "source_updated_at": "2024-04-16",
+      "source_accessed_at": "2026-09-05",
+      "content_kind": "official_source_paraphrase",
+      "is_paraphrase": true,
+      "jurisdiction": "United States",
+      "version": "source-updated-2024-04-16",
+      "text": "CDC advises that uncomplicated acute bronchitis should not routinely be treated with antibiotics, regardless of how long the cough has lasted. The same source says evidence for specific symptom treatments is limited and benefits and harms should be weighed.",
+      "recommendation": "Do not generate a routine antibiotic recommendation for uncomplicated acute bronchitis; leave diagnosis and treatment decisions to a qualified clinician.",
+      "keywords": [
+        "acute bronchitis",
+        "bronchitis",
+        "antibiotic",
+        "antibiotics",
+        "cough duration",
+        "routine treatment",
+        "stewardship"
+      ],
+      "contradicted_statements": [
+        "Recommend routine antibiotics for uncomplicated acute bronchitis.",
+        "A longer cough automatically requires antibiotics."
+      ]
+    },
+    {
+      "id": "hhs-deidentification-methods-001",
+      "title": "HIPAA de-identification methods",
+      "category": "privacy",
+      "source": "Guidance Regarding Methods for De-identification of Protected Health Information",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "source_url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html",
+      "source_updated_at": "2025-02-03",
+      "source_accessed_at": "2026-09-05",
+      "content_kind": "official_source_paraphrase",
+      "is_paraphrase": true,
+      "jurisdiction": "United States",
+      "version": "content-reviewed-2025-02-03",
+      "text": "HHS describes two routes for satisfying the HIPAA Privacy Rule de-identification standard: Expert Determination and Safe Harbor. HHS also cautions that properly de-identified information can retain a small, nonzero re-identification risk.",
+      "recommendation": "Treat de-identification as a documented process using an applicable recognized method, not as an informal removal of a few obvious fields.",
+      "keywords": [
+        "HIPAA",
+        "de-identification",
+        "deidentified",
+        "Safe Harbor",
+        "Expert Determination",
+        "privacy",
+        "re-identification"
+      ],
+      "contradicted_statements": [
+        "Removing one obvious identifier always satisfies HIPAA de-identification requirements.",
+        "Properly de-identified data has zero re-identification risk."
+      ]
+    },
+    {
+      "id": "hhs-phi-identifiers-001",
+      "title": "Direct identifiers in health information",
+      "category": "privacy",
+      "source": "Guidance Regarding Methods for De-identification of Protected Health Information",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "source_url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html",
+      "source_updated_at": "2025-02-03",
+      "source_accessed_at": "2026-09-05",
+      "content_kind": "official_source_paraphrase",
+      "is_paraphrase": true,
+      "jurisdiction": "United States",
+      "version": "content-reviewed-2025-02-03",
+      "text": "HHS explains that identifiers such as a name, address, birth date, Social Security number, medical-record number, contact details, and other unique codes can make associated health information identifiable. Its guidance also addresses identifiers that may appear inside free-text records.",
+      "recommendation": "Before sending a case to the demo, remove direct identifiers from both structured fields and free text, and submit only the minimum information needed for review.",
+      "keywords": [
+        "name",
+        "address",
+        "birth date",
+        "social security number",
+        "medical record number",
+        "phone number",
+        "email address",
+        "identifier",
+        "free text",
+        "PHI"
+      ],
+      "contradicted_statements": [
+        "Include names, addresses, and medical record numbers in every case summary.",
+        "Free-text health records never contain identifying information."
+      ]
+    }
+  ]
+}
+

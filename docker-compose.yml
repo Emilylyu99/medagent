@@ -1,0 +1,34 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    environment:
+      APP_ENV: development
+      KNOWLEDGE_BASE_PATH: data/guidelines.json
+      EVALUATION_CASES_PATH: data/evaluation_cases.json
+      REASONER_MODE: ${REASONER_MODE:-extractive}
+      PIPELINE_MODE: ${PIPELINE_MODE:-baseline}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 5s
+      timeout: 4s
+      retries: 12
+
+  ui:
+    build: .
+    command: ["streamlit", "run", "ui/app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "127.0.0.1:${UI_PORT:-8501}:8501"
+    environment:
+      API_BASE_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=3)"]
+      interval: 5s
+      timeout: 4s
+      retries: 12

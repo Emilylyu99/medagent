@@ -1,0 +1,397 @@
+{
+  "generated_at": "2026-09-06T00:38:50.647690+00:00",
+  "execution": "offline; explicit extractive reasoner; no model API calls",
+  "environment": {
+    "python": "3.12.6",
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "knowledge_sha256": "e32d0a78b4f84dad82b36456bcdf767eda5a372b0177f67f5e8f980f7bf0b339",
+    "cases_sha256": "071cc13d79fa038107a94c622e029520370a2a8ca2e74707486db7b35e82888e",
+    "code_sha256": {
+      "app/__init__.py": "73419ccbbd49dfbd8ed1d5aac769f8549bf41bda4ec3dce047fcca966d1a0704",
+      "app/agents/__init__.py": "b51ab5597e74c9124b41dfd6ecb7bdf80f93a97702274f285ecebb4fa598f825",
+      "app/agents/conflict_detector.py": "f346492a9cd121e4d0a1eaf849485ac82132da0edb39b1b86668d12e90984eaa",
+      "app/agents/reasoner.py": "4db61950809220ee7da956cf7df366dc944368d36c08342e09338148255e16fd",
+      "app/agents/retriever.py": "32d178629a034d9b88221d37bd1ee6d30f66c2d79c0397da5567ab44c9a8b267",
+      "app/agents/verifier.py": "9b53fac923f9a776ae477c5b219e0c32e29af76654eda1922ccaabe90c00e77a",
+      "app/demo.py": "eb4273824ad933277313094f605ff21578a4e5142ce3ba872ee44ccc9924a5c8",
+      "app/evaluation.py": "818abcd4e082e678a440767e00ffa2f4504ee06172d253d43f768bde99e3a849",
+      "app/knowledge.py": "4d28140bf37c1201e187a6c00e5affb1f5b3afbbabc88adc5768f482924b48fa",
+      "app/main.py": "532f29fb5052c2dbbbc8320b89a9ac398383f06625358eae881241c8ce709a29",
+      "app/models.py": "4f40aa7fd0a2b54edc8094f8d0a57fe83a66238aa78f95ec12abc03232f14023",
+      "app/orchestrator.py": "c2cf5bbf34acaf99c8c9cd8f240317dbf44678524ec1aac4e9ddaf94390351c7",
+      "app/settings.py": "407ec6d74307fbb8ac9b67f24e18edece9f0fa93503b95244caa61acf60cbafb"
+    }
+  },
+  "evaluation": {
+    "dataset_name": "synthetic_cases_official_source_retrieval_v1",
+    "case_count": 6,
+    "mean_retrieval_recall": 1.0,
+    "mean_citation_precision": 1.0,
+    "mean_supported_claim_rate": 1.0,
+    "hallucination_rate": 0.0,
+    "mean_latency_ms": 0.062,
+    "p95_latency_ms": 0.125,
+    "conflict_case_rate": 0.0,
+    "reasoner_mode": "extractive",
+    "metric_note": "Small synthetic smoke set. Grounding and hallucination_rate are rule-based proxies, not clinical accuracy or an independently measured hallucination rate.",
+    "results": [
+      {
+        "case_id": "eval-urgent-001",
+        "expected_citation_ids": [
+          "cdc-respiratory-emergency-adults-001"
+        ],
+        "retrieved_citation_ids": [
+          "cdc-respiratory-emergency-adults-001"
+        ],
+        "retrieval_recall": 1.0,
+        "citation_precision": 1.0,
+        "supported_claim_rate": 1.0,
+        "conflict_count": 0,
+        "latency_ms": 0.125
+      },
+      {
+        "case_id": "eval-antibiotic-001",
+        "expected_citation_ids": [
+          "cdc-bronchitis-antibiotics-001"
+        ],
+        "retrieved_citation_ids": [
+          "cdc-bronchitis-antibiotics-001"
+        ],
+        "retrieval_recall": 1.0,
+        "citation_precision": 1.0,
+        "supported_claim_rate": 1.0,
+        "conflict_count": 0,
+        "latency_ms": 0.062
+      },
+      {
+        "case_id": "eval-assessment-001",
+        "expected_citation_ids": [
+          "cdc-bronchitis-assessment-001"
+        ],
+        "retrieved_citation_ids": [
+          "cdc-bronchitis-assessment-001"
+        ],
+        "retrieval_recall": 1.0,
+        "citation_precision": 1.0,
+        "supported_claim_rate": 1.0,
+        "conflict_count": 0,
+        "latency_ms": 0.051
+      },
+      {
+        "case_id": "eval-risk-001",
+        "expected_citation_ids": [
+          "cdc-respiratory-higher-risk-001"
+        ],
+        "retrieved_citation_ids": [
+          "cdc-respiratory-higher-risk-001"
+        ],
+        "retrieval_recall": 1.0,
+        "citation_precision": 1.0,
+        "supported_claim_rate": 1.0,
+        "conflict_count": 0,
+        "latency_ms": 0.05
+      },
+      {
+        "case_id": "eval-privacy-001",
+        "expected_citation_ids": [
+          "hhs-phi-identifiers-001"
+        ],
+        "retrieved_citation_ids": [
+          "hhs-phi-identifiers-001"
+        ],
+        "retrieval_recall": 1.0,
+        "citation_precision": 1.0,
+        "supported_claim_rate": 1.0,
+        "conflict_count": 0,
+        "latency_ms": 0.042
+      },
+      {
+        "case_id": "eval-deidentification-001",
+        "expected_citation_ids": [
+          "hhs-deidentification-methods-001"
+        ],
+        "retrieved_citation_ids": [
+          "hhs-deidentification-methods-001"
+        ],
+        "retrieval_recall": 1.0,
+        "citation_precision": 1.0,
+        "supported_claim_rate": 1.0,
+        "conflict_count": 0,
+        "latency_ms": 0.04
+      }
+    ]
+  },
+  "smoke_checks": {
+    "injected_errors_detected": true,
+    "unrelated_input_abstains": true
+  },
+  "conflict_demo": {
+    "case_id": "demo-conflict-injection",
+    "is_demo": true,
+    "retrieved_citations": [
+      {
+        "citation_id": "cdc-bronchitis-antibiotics-001",
+        "title": "Antibiotics for uncomplicated acute bronchitis",
+        "source": "Outpatient Clinical Care for Adults",
+        "publisher": "US Centers for Disease Control and Prevention",
+        "source_url": "https://www.cdc.gov/antibiotic-use/hcp/clinical-care/adult-outpatient.html",
+        "source_updated_at": "2024-04-16",
+        "source_accessed_at": "2026-09-05",
+        "content_kind": "official_source_paraphrase",
+        "is_paraphrase": true,
+        "jurisdiction": "United States",
+        "version": "source-updated-2024-04-16",
+        "excerpt": "CDC advises that uncomplicated acute bronchitis should not routinely be treated with antibiotics, regardless of how long the cough has lasted. The same source says evidence for specific symptom treatments is limited and benefits and harms should be weighed.",
+        "review_point": "Do not generate a routine antibiotic recommendation for uncomplicated acute bronchitis; leave diagnosis and treatment decisions to a qualified clinician.",
+        "retrieval_score": 17.0325,
+        "matched_terms": [
+          "acute",
+          "antibiotics",
+          "bronchitis",
+          "cough",
+          "duration",
+          "routine",
+          "uncomplicated"
+        ]
+      }
+    ],
+    "status": "needs_human_review",
+    "summary": "Synthetic adult case with uncomplicated acute bronchitis and a seven-day cough.",
+    "claims": [
+      {
+        "claim_id": "claim-1",
+        "text": "Do not generate a routine antibiotic recommendation for uncomplicated acute bronchitis; leave diagnosis and treatment decisions to a qualified clinician.",
+        "category": "antibiotic_stewardship",
+        "citation_ids": [
+          "cdc-bronchitis-antibiotics-001"
+        ],
+        "confidence": 0.89
+      },
+      {
+        "claim_id": "injected-contradiction",
+        "text": "Recommend routine antibiotics for uncomplicated acute bronchitis.",
+        "category": "injected_error",
+        "citation_ids": [
+          "cdc-bronchitis-antibiotics-001"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "claim_id": "injected-missing-source",
+        "text": "This case has already been independently reviewed.",
+        "category": "injected_error",
+        "citation_ids": [
+          "nonexistent-source"
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "uncertainties": [
+      "DEMO ONLY: two deliberate errors were injected after extractive reasoning. This demonstrates detection plumbing, not an observed model failure rate."
+    ],
+    "citations": [
+      {
+        "citation_id": "cdc-bronchitis-antibiotics-001",
+        "title": "Antibiotics for uncomplicated acute bronchitis",
+        "source": "Outpatient Clinical Care for Adults",
+        "publisher": "US Centers for Disease Control and Prevention",
+        "source_url": "https://www.cdc.gov/antibiotic-use/hcp/clinical-care/adult-outpatient.html",
+        "source_updated_at": "2024-04-16",
+        "source_accessed_at": "2026-09-05",
+        "content_kind": "official_source_paraphrase",
+        "is_paraphrase": true,
+        "jurisdiction": "United States",
+        "version": "source-updated-2024-04-16",
+        "excerpt": "CDC advises that uncomplicated acute bronchitis should not routinely be treated with antibiotics, regardless of how long the cough has lasted. The same source says evidence for specific symptom treatments is limited and benefits and harms should be weighed.",
+        "review_point": "Do not generate a routine antibiotic recommendation for uncomplicated acute bronchitis; leave diagnosis and treatment decisions to a qualified clinician.",
+        "retrieval_score": 17.0325,
+        "matched_terms": [
+          "acute",
+          "antibiotics",
+          "bronchitis",
+          "cough",
+          "duration",
+          "routine",
+          "uncomplicated"
+        ]
+      }
+    ],
+    "verification": [
+      {
+        "claim_id": "claim-1",
+        "label": "supported",
+        "score": 1.0,
+        "evidence_ids_checked": [
+          "cdc-bronchitis-antibiotics-001"
+        ],
+        "rationale": "Exact text match to a curated evidence sentence or review point; applicability is not assessed."
+      },
+      {
+        "claim_id": "injected-contradiction",
+        "label": "contradicted",
+        "score": 1.0,
+        "evidence_ids_checked": [
+          "cdc-bronchitis-antibiotics-001"
+        ],
+        "rationale": "Exact match to a curator-authored counterexample; not a semantic model judgment."
+      },
+      {
+        "claim_id": "injected-missing-source",
+        "label": "unsupported",
+        "score": 0.0,
+        "evidence_ids_checked": [],
+        "rationale": "One or more citations are missing from the retrieved evidence."
+      }
+    ],
+    "conflicts": [
+      {
+        "claim_id": "injected-contradiction",
+        "severity": "critical",
+        "reason": "The verifier found that the evidence contradicts this claim.",
+        "requires_human_review": true
+      },
+      {
+        "claim_id": "injected-missing-source",
+        "severity": "high",
+        "reason": "The reasoner emitted a claim that is not adequately grounded.",
+        "requires_human_review": true
+      }
+    ],
+    "metrics": {
+      "retrieval_ms": 0.032,
+      "reasoning_ms": 0.013,
+      "verification_ms": 0.267,
+      "conflict_detection_ms": 0.005,
+      "total_ms": 0.32,
+      "retrieved_chunks": 1,
+      "generated_claims": 3,
+      "supported_claim_rate": 0.333,
+      "reasoner_mode": "fault_injection_demo",
+      "model_name": null,
+      "input_tokens": 37,
+      "output_tokens": 68,
+      "token_count_source": "estimated"
+    },
+    "trace": [
+      {
+        "component": "retriever",
+        "status": "completed",
+        "duration_ms": 0.032,
+        "details": {
+          "candidate_documents": 6,
+          "retrieved_documents": 1,
+          "retrieved_ids": [
+            "cdc-bronchitis-antibiotics-001"
+          ]
+        }
+      },
+      {
+        "component": "reasoner",
+        "status": "completed",
+        "duration_ms": 0.013,
+        "details": {
+          "mode": "fault_injection_demo",
+          "model": null,
+          "provider_response_id": null,
+          "claim_count": 3
+        }
+      },
+      {
+        "component": "verifier",
+        "status": "completed",
+        "duration_ms": 0.267,
+        "details": {
+          "supported": 1,
+          "flagged": 2,
+          "method": "exact_text_and_known_counterexamples_v2"
+        }
+      },
+      {
+        "component": "conflict_detector",
+        "status": "flagged",
+        "duration_ms": 0.005,
+        "details": {
+          "conflicts": 2,
+          "requires_review": true
+        }
+      }
+    ],
+    "disclaimer": "Educational synthetic-case demonstration using curated public-source paraphrases. This output is not medical advice, does not provide a diagnosis, and must not be used for patient care. Verify all details on the linked official source pages."
+  },
+  "abstention_demo": {
+    "case_id": "release-out-of-scope",
+    "is_demo": false,
+    "retrieved_citations": [],
+    "status": "no_evidence",
+    "summary": "Orbital mechanics and telescope mirrors aboard a spacecraft.",
+    "claims": [],
+    "uncertainties": [
+      "No sufficiently relevant evidence was found; no substantive review point was generated.",
+      "The offline baseline can only surface statements present in the bundled corpus."
+    ],
+    "citations": [],
+    "verification": [],
+    "conflicts": [],
+    "metrics": {
+      "retrieval_ms": 0.022,
+      "reasoning_ms": 0.001,
+      "verification_ms": 0.0,
+      "conflict_detection_ms": 0.0,
+      "total_ms": 0.025,
+      "retrieved_chunks": 0,
+      "generated_claims": 0,
+      "supported_claim_rate": 0.0,
+      "reasoner_mode": "extractive",
+      "model_name": null,
+      "input_tokens": 26,
+      "output_tokens": 1,
+      "token_count_source": "estimated"
+    },
+    "trace": [
+      {
+        "component": "retriever",
+        "status": "completed",
+        "duration_ms": 0.022,
+        "details": {
+          "candidate_documents": 6,
+          "retrieved_documents": 0,
+          "retrieved_ids": []
+        }
+      },
+      {
+        "component": "reasoner",
+        "status": "completed",
+        "duration_ms": 0.001,
+        "details": {
+          "mode": "extractive",
+          "model": null,
+          "provider_response_id": null,
+          "claim_count": 0
+        }
+      },
+      {
+        "component": "verifier",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "details": {
+          "supported": 0,
+          "flagged": 0,
+          "method": "exact_text_and_known_counterexamples_v2"
+        }
+      },
+      {
+        "component": "conflict_detector",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "details": {
+          "conflicts": 0,
+          "requires_review": false
+        }
+      }
+    ],
+    "disclaimer": "Educational synthetic-case demonstration using curated public-source paraphrases. This output is not medical advice, does not provide a diagnosis, and must not be used for patient care. Verify all details on the linked official source pages."
+  }
+}

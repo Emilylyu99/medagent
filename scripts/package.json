@@ -1,0 +1,12 @@
+{
+  "name": "medagent-demo-tools",
+  "private": true,
+  "scripts": {
+    "preview": "node record_demo.cjs --quick",
+    "record": "node record_demo.cjs",
+    "render": "node render_demo.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

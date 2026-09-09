@@ -1,0 +1,22 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+node_modules/
+artifacts/
+
+# Keep local provider-run diagnostics out of published source.
+reports/first-adaptive-live-run/
